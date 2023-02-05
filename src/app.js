@@ -83,7 +83,7 @@ app.delete("/products/:pid",  async (req, res) => {
 });
 
 io.on("connection", async (socket) => {
-  console.log("onConnect client id:", socket.id);
+  console.log("cliente conectado id:", socket.id);
 
   const pm = new ProductManager("./data/productos.json");
   let products = await pm.getProducts();
